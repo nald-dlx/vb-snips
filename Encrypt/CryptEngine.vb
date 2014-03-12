@@ -42,20 +42,25 @@
          Return ""
       End If
       For cnt As Long = 1 To Text.Length
-         Dim KeyPos As Long = Asc(Mid(Text, cnt, 1)) + cnt         
-         sb.Append(Key(KeyPos - 1))
+         Dim KeyPos As Long = Asc(Mid(Text, cnt, 1)) - 32 + (cnt - 1) * 93
+         sb.Append(Key(KeyPos))
       Next
       Return sb.ToString
    End Function
 
    Public Function Decrypt(ByVal Text As String) As String
       Dim sb As New System.Text.StringBuilder
+      Dim KeyPos As Long = 0
       If Not KeyAvailable Then
          Return ""
       End If
       For cnt As Long = 1 To Text.Length
-         Dim KeyPos As Long = Asc(Mid(Text, cnt, 1)) + cnt
-         sb.Append(Key(KeyPos - 1))
+         For KeyPos = 0 To 93
+            If Key(KeyPos + (cnt - 1) * 93) = Mid(Text, cnt, 1) Then
+               Exit For
+            End If
+         Next
+         sb.Append(Chr(KeyPos + 32))
       Next
       Return sb.ToString
    End Function
@@ -71,6 +76,9 @@
    Public Sub LoadKey(ByVal FileName As String)
       Dim sb As New System.Text.StringBuilder
       sb.Append(My.Computer.FileSystem.ReadAllText(FileName))
+      For i As Integer = 0 To sb.Length - 1
+         Key(i) = sb(i)
+      Next
       KeyAvailable = True
       KeyName = FileName
    End Sub

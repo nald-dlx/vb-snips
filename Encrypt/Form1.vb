@@ -6,13 +6,13 @@
 
    End Sub
 
-
    Private Sub btnGenerateKey_Click(sender As System.Object, e As System.EventArgs) Handles btnGenerateKey.Click
       If Cursor = Cursors.WaitCursor Then
          Exit Sub
       End If
       Cursor = Cursors.WaitCursor
       oCrypt.GenerateNewKey()
+      txtKeyName.Text = oCrypt.KeyName
       Cursor = Cursors.Default
    End Sub
 
@@ -28,12 +28,13 @@
       If Not oCrypt.KeyAvailable Then
          Exit Sub
       End If
-      oCrypt.SaveKey("c:\temp\" & oCrypt.KeyName)
+      oCrypt.SaveKey("c:\temp\DNE130619082717.KEY")  ' & oCrypt.KeyName
+      txtKeyName.Text = oCrypt.KeyName
    End Sub
 
    Private Sub btnLoadKey_Click(sender As System.Object, e As System.EventArgs) Handles btnLoadKey.Click
       oCrypt.LoadKey("C:\Temp\DNE130619082717.KEY")
-
+      txtKeyName.Text = oCrypt.KeyName
    End Sub
 
 End Class
