@@ -32,7 +32,8 @@
    End Sub
 
    Private Sub btnLoadKey_Click(sender As System.Object, e As System.EventArgs) Handles btnLoadKey.Click
-      oCrypt.loadkey("C:\Temp\DNE130619082717.KEY")
+      oCrypt.LoadKey("C:\Temp\DNE130619082717.KEY")
+
    End Sub
 
 End Class
