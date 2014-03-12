@@ -1,7 +1,20 @@
-﻿Public Class CryptEngine
+﻿'----------------------------------------------------------------------
+'
+' Below technique makes decryption difficult without the key !
+' 
+' A block of 93 characters random generated contains one characters
+' Each characters position defines which block is choosen for encryption
+' only after 632 characters in encryption string repetition is there
+'
+' this software is a POC (Proof of Concept) of having 'portable keys' of f.e. 2 Gbyte on a 2 Gbyte memory stick.
+' each stick is unique because of difference in key length, randomizing repetition effect
+'
+'----------------------------------------------------------------------
 
-   Dim Key(93 * 632) As String  ' Matching key file
-   Dim KeyBlock(93) As String ' next key block
+Public Class CryptEngine
+
+   Dim Key(93 * 632) As String  ' Matching key file - only alfanumeric characters
+   Dim KeyBlock(93) As String ' next key block of 93 characters  
    Public KeyAvailable As Boolean
    Public KeyName As String
 

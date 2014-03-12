@@ -38,7 +38,7 @@ Partial Class Form1
       Me.txtSource.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.txtSource.Location = New System.Drawing.Point(17, 16)
-      Me.txtSource.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+      Me.txtSource.Margin = New System.Windows.Forms.Padding(4)
       Me.txtSource.Multiline = True
       Me.txtSource.Name = "txtSource"
       Me.txtSource.ScrollBars = System.Windows.Forms.ScrollBars.Both
@@ -51,7 +51,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.txtDestination.Location = New System.Drawing.Point(17, 288)
-      Me.txtDestination.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+      Me.txtDestination.Margin = New System.Windows.Forms.Padding(4)
       Me.txtDestination.Multiline = True
       Me.txtDestination.Name = "txtDestination"
       Me.txtDestination.ScrollBars = System.Windows.Forms.ScrollBars.Both
@@ -61,7 +61,7 @@ Partial Class Form1
       'btnEncrypt
       '
       Me.btnEncrypt.Location = New System.Drawing.Point(17, 252)
-      Me.btnEncrypt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+      Me.btnEncrypt.Margin = New System.Windows.Forms.Padding(4)
       Me.btnEncrypt.Name = "btnEncrypt"
       Me.btnEncrypt.Size = New System.Drawing.Size(100, 28)
       Me.btnEncrypt.TabIndex = 2
@@ -71,7 +71,7 @@ Partial Class Form1
       'btnDecrypt
       '
       Me.btnDecrypt.Location = New System.Drawing.Point(125, 252)
-      Me.btnDecrypt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+      Me.btnDecrypt.Margin = New System.Windows.Forms.Padding(4)
       Me.btnDecrypt.Name = "btnDecrypt"
       Me.btnDecrypt.Size = New System.Drawing.Size(100, 28)
       Me.btnDecrypt.TabIndex = 3
@@ -81,7 +81,7 @@ Partial Class Form1
       'btnSaveKey
       '
       Me.btnSaveKey.Location = New System.Drawing.Point(233, 252)
-      Me.btnSaveKey.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+      Me.btnSaveKey.Margin = New System.Windows.Forms.Padding(4)
       Me.btnSaveKey.Name = "btnSaveKey"
       Me.btnSaveKey.Size = New System.Drawing.Size(100, 28)
       Me.btnSaveKey.TabIndex = 4
@@ -91,7 +91,7 @@ Partial Class Form1
       'btnLoadKey
       '
       Me.btnLoadKey.Location = New System.Drawing.Point(341, 252)
-      Me.btnLoadKey.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+      Me.btnLoadKey.Margin = New System.Windows.Forms.Padding(4)
       Me.btnLoadKey.Name = "btnLoadKey"
       Me.btnLoadKey.Size = New System.Drawing.Size(100, 28)
       Me.btnLoadKey.TabIndex = 5
@@ -101,7 +101,7 @@ Partial Class Form1
       'btnGenerateKey
       '
       Me.btnGenerateKey.Location = New System.Drawing.Point(449, 252)
-      Me.btnGenerateKey.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+      Me.btnGenerateKey.Margin = New System.Windows.Forms.Padding(4)
       Me.btnGenerateKey.Name = "btnGenerateKey"
       Me.btnGenerateKey.Size = New System.Drawing.Size(135, 28)
       Me.btnGenerateKey.TabIndex = 6
@@ -138,7 +138,7 @@ Partial Class Form1
       Me.Controls.Add(Me.btnEncrypt)
       Me.Controls.Add(Me.txtDestination)
       Me.Controls.Add(Me.txtSource)
-      Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+      Me.Margin = New System.Windows.Forms.Padding(4)
       Me.Name = "Form1"
       Me.Text = "Encryption toolset"
       Me.ResumeLayout(False)
